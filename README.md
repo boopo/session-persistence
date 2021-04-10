@@ -44,7 +44,7 @@ Apidoc生成：
 
        npm install apidoc
        apidoc -i src/ -o apidoc/
-       
+ 因为前几天发现除了教务系统和图书馆别的都不需要内网环境，所以为了保证服务的高可用，可以将此项目重新拆分，一部分部署在serverless上，一部分放到内网服务器上     
 
 
        

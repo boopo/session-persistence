@@ -18,7 +18,7 @@ class Initialization(Resource):
             user.login()
             return "ok", 200
         except:
-            return "null", 400
+            return "null", 500
 
 
 class Portal(Resource):
@@ -33,7 +33,7 @@ class Portal(Resource):
                 user.login()
             return user_id.get_portal_cookie()
         except:
-            return "null", 400
+            return "null", 500
 
 
 class Jwxt(Resource):
@@ -48,7 +48,7 @@ class Jwxt(Resource):
                 user.login_with_jwxt()
             return user_id.get_jwxt_cookie()
         except:
-            return "null", 400
+            return "null", 500
 
 
 class Card(Resource):
@@ -63,7 +63,7 @@ class Card(Resource):
                 user.login_with_card()
             return user_id.get_card_cookie()
         except:
-            return "null", 400
+            return "null", 500
 
 
 class Book(Resource):
@@ -78,7 +78,9 @@ class Book(Resource):
                 user.login_with_lib()
             return user_id.get_lib_cookie()
         except:
-            return "null", 400
+            return "null", 500
+
+
 class Test(Resource):
     def get(self):
         return "hello,my son!"
